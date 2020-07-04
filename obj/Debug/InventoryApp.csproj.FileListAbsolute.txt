@@ -9,3 +9,4 @@ C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csp
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csproj.CopyComplete
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.exe
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.pdb
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\InventoryDatabase.db

@@ -38,12 +38,12 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.BtnMin = new FontAwesome.Sharp.IconButton();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.BtnMin = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -239,6 +239,22 @@
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // BtnMin
+            // 
+            this.BtnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnMin.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnMin.IconChar = FontAwesome.Sharp.IconChar.OldRepublic;
+            this.BtnMin.IconColor = System.Drawing.Color.Black;
+            this.BtnMin.IconSize = 56;
+            this.BtnMin.Location = new System.Drawing.Point(732, 3);
+            this.BtnMin.Name = "BtnMin";
+            this.BtnMin.Rotation = 0D;
+            this.BtnMin.Size = new System.Drawing.Size(74, 60);
+            this.BtnMin.TabIndex = 3;
+            this.BtnMin.UseVisualStyleBackColor = true;
+            // 
             // BtnExit
             // 
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -296,22 +312,7 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(901, 521);
             this.panelDesktop.TabIndex = 3;
-            // 
-            // BtnMin
-            // 
-            this.BtnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.BtnMin.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.BtnMin.IconChar = FontAwesome.Sharp.IconChar.OldRepublic;
-            this.BtnMin.IconColor = System.Drawing.Color.Black;
-            this.BtnMin.IconSize = 56;
-            this.BtnMin.Location = new System.Drawing.Point(732, 3);
-            this.BtnMin.Name = "BtnMin";
-            this.BtnMin.Rotation = 0D;
-            this.BtnMin.Size = new System.Drawing.Size(74, 60);
-            this.BtnMin.TabIndex = 3;
-            this.BtnMin.UseVisualStyleBackColor = true;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
             // FormMainMenu
             // 

@@ -210,5 +210,10 @@ namespace InventoryApp
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

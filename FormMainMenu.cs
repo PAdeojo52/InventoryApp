@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using InventoryApp.Forms;
+using InventoryApp.Forms.LoginForm;
 
 namespace InventoryApp
 {
@@ -98,13 +99,18 @@ namespace InventoryApp
             ActivateButton(sender, Color.Cyan);
             openChildForm(new FormDashboard());
         }
+        private void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            FormMainMenu FMM = new FormMainMenu();
+            FMM.openChildForm(new FormDashboard());
+        }
 
         private void AccountInfo_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.DarkCyan);
 
         }
-
+       
         private void Settings_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Purple);

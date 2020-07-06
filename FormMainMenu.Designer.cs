@@ -43,6 +43,7 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.BtnMin = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -227,6 +228,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelTitleBar.Controls.Add(this.BtnMin);
             this.panelTitleBar.Controls.Add(this.BtnExit);
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
@@ -295,6 +297,22 @@
             this.panelDesktop.Size = new System.Drawing.Size(901, 521);
             this.panelDesktop.TabIndex = 3;
             // 
+            // BtnMin
+            // 
+            this.BtnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMin.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.BtnMin.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnMin.IconChar = FontAwesome.Sharp.IconChar.OldRepublic;
+            this.BtnMin.IconColor = System.Drawing.Color.Black;
+            this.BtnMin.IconSize = 56;
+            this.BtnMin.Location = new System.Drawing.Point(732, 3);
+            this.BtnMin.Name = "BtnMin";
+            this.BtnMin.Rotation = 0D;
+            this.BtnMin.Size = new System.Drawing.Size(74, 60);
+            this.BtnMin.TabIndex = 3;
+            this.BtnMin.UseVisualStyleBackColor = true;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,6 +352,7 @@
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconButton BtnExit;
+        private FontAwesome.Sharp.IconButton BtnMin;
     }
 }
 

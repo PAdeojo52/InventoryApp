@@ -10,3 +10,10 @@ C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csp
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.exe
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.pdb
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\InventoryDatabase.db
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\Dapper.dll
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\Dapper.xml
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\System.Data.SQLite.xml
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.FormDashboard.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.LoginForm.FormRegister.resources

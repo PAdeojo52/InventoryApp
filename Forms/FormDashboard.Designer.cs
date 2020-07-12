@@ -35,8 +35,8 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.EmailLoginLabel = new System.Windows.Forms.Label();
             this.PasswordLoginLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.PWBox = new System.Windows.Forms.TextBox();
             this.IncorrectEmailLabel = new System.Windows.Forms.Label();
             this.IncorrectPasswordLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -49,11 +49,10 @@
             this.StatusBar.Size = new System.Drawing.Size(208, 17);
             this.StatusBar.TabIndex = 0;
             this.StatusBar.Text = "You are currently not Logged in";
-            this.StatusBar.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginBtn
             // 
-            this.LoginBtn.Location = new System.Drawing.Point(329, 245);
+            this.LoginBtn.Location = new System.Drawing.Point(329, 250);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(75, 23);
             this.LoginBtn.TabIndex = 1;
@@ -69,7 +68,6 @@
             this.RegisterLabel.Size = new System.Drawing.Size(158, 17);
             this.RegisterLabel.TabIndex = 2;
             this.RegisterLabel.Text = "Press Below to Register";
-            this.RegisterLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // LoginLabel
             // 
@@ -79,17 +77,16 @@
             this.LoginLabel.Size = new System.Drawing.Size(140, 17);
             this.LoginLabel.TabIndex = 3;
             this.LoginLabel.Text = "Press Below to Login";
-            this.LoginLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.Location = new System.Drawing.Point(329, 348);
+            this.RegisterBtn.Location = new System.Drawing.Point(329, 331);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(75, 23);
             this.RegisterBtn.TabIndex = 4;
             this.RegisterBtn.Text = "Register";
             this.RegisterBtn.UseVisualStyleBackColor = true;
-           // this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // EmailLoginLabel
             // 
@@ -109,20 +106,19 @@
             this.PasswordLoginLabel.TabIndex = 6;
             this.PasswordLoginLabel.Text = "Password";
             // 
-            // textBox1
+            // emailBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(355, 149);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 22);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.emailBox.Location = new System.Drawing.Point(355, 149);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(194, 22);
+            this.emailBox.TabIndex = 7;
             // 
-            // textBox2
+            // PWBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(355, 198);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 22);
-            this.textBox2.TabIndex = 8;
+            this.PWBox.Location = new System.Drawing.Point(355, 198);
+            this.PWBox.Name = "PWBox";
+            this.PWBox.Size = new System.Drawing.Size(194, 22);
+            this.PWBox.TabIndex = 8;
             // 
             // IncorrectEmailLabel
             // 
@@ -148,8 +144,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.IncorrectPasswordLabel);
             this.Controls.Add(this.IncorrectEmailLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PWBox);
+            this.Controls.Add(this.emailBox);
             this.Controls.Add(this.PasswordLoginLabel);
             this.Controls.Add(this.EmailLoginLabel);
             this.Controls.Add(this.RegisterBtn);
@@ -159,6 +155,7 @@
             this.Controls.Add(this.StatusBar);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
+            this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,8 +170,8 @@
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Label EmailLoginLabel;
         private System.Windows.Forms.Label PasswordLoginLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.TextBox PWBox;
         private System.Windows.Forms.Label IncorrectEmailLabel;
         private System.Windows.Forms.Label IncorrectPasswordLabel;
     }

@@ -22,6 +22,7 @@ namespace InventoryApp
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
+        public Form CurrentChildForm { get => currentChildForm; set => currentChildForm = value; }
 
         public FormMainMenu()
         {
@@ -97,7 +98,7 @@ namespace InventoryApp
         private void Dashboard_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Cyan);
-            openChildForm(new FormDashboard());
+            openChildForm(new FormDashboard(this));
         }
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
@@ -143,6 +144,12 @@ namespace InventoryApp
 
         //Needs some work on the reset
         private void btnHome_Click(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
+            Reset();
+        }
+
+        public void btnHomeChild_Click(object sender, EventArgs e)
         {
             currentChildForm.Close();
             Reset();

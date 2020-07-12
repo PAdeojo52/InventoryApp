@@ -17,3 +17,9 @@ C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\System.Data.SQLi
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.FormDashboard.resources
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.LoginForm.FormRegister.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.FormCheckin.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.FormCheckout.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.FormSettings.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.FormStock.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\InventoryLibrary.dll
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\InventoryLibrary.pdb

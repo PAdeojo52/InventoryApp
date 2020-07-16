@@ -21,6 +21,7 @@ namespace InventoryApp
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private int USERID = -1;
 
         public Form CurrentChildForm { get => currentChildForm; set => currentChildForm = value; }
 

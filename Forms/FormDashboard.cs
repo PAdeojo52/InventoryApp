@@ -55,7 +55,7 @@ namespace InventoryApp.Forms
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            this.formMainMenu.openChildForm(new FormRegister());
+            this.formMainMenu.openChildForm(new FormRegister(formMainMenu));
         }
     }
 }

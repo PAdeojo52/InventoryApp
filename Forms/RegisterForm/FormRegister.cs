@@ -15,10 +15,10 @@ namespace InventoryApp.Forms.LoginForm
     public partial class FormRegister : Form
     {
         private FormMainMenu formMainMenu;
-        public FormRegister()
+        /*public FormRegister()
         {
             InitializeComponent();
-        }
+        }*/
 
         public FormRegister(FormMainMenu formMainMenu)
         {
@@ -41,10 +41,12 @@ namespace InventoryApp.Forms.LoginForm
         {
             Random rnd = new Random();
             int id = rnd.Next(5, 1300);
-            UserModel newAccount = new UserModel(id,firstNameBox.Text,lastNameBox.Text,emailBox.Text,phoneNumberBox.Text,
+            UserModel newAccount = new UserModel(firstNameBox.Text,lastNameBox.Text,emailBox.Text,phoneNumberBox.Text,
                0.0 , 0 , pwBox.Text);
 
             UserSetup.CreateUser(newAccount);
+
+            this.formMainMenu.btnHomeChild_Click(sender, e);
         }
     }
 }

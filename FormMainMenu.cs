@@ -22,6 +22,7 @@ namespace InventoryApp
         private Panel leftBorderBtn;
         private Form currentChildForm;
         private int USERID = -1;
+        private bool isLoggedIn;
 
         public Form CurrentChildForm { get => currentChildForm; set => currentChildForm = value; }
 

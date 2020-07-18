@@ -81,16 +81,16 @@
     <Compile Include="Forms\FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormSettings.cs">
+    <Compile Include="Forms\Settings\FormSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormSettings.Designer.cs">
+    <Compile Include="Forms\Settings\FormSettings.Designer.cs">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormStock.cs">
+    <Compile Include="Forms\Stock\FormStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormStock.Designer.cs">
+    <Compile Include="Forms\Stock\FormStock.Designer.cs">
       <DependentUpon>FormStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RegisterForm\FormRegister.cs">
@@ -113,10 +113,10 @@
     <EmbeddedResource Include="Forms\FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormSettings.resx">
+    <EmbeddedResource Include="Forms\Settings\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormStock.resx">
+    <EmbeddedResource Include="Forms\Stock\FormStock.resx">
       <DependentUpon>FormStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm\FormRegister.resx">

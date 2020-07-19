@@ -93,6 +93,12 @@
     <Compile Include="Forms\Dashboard\LoggedInDashboardForm.Designer.cs">
       <DependentUpon>LoggedInDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Settings\FormAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\FormAccountSettings.Designer.cs">
+      <DependentUpon>FormAccountSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Settings\FormSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="Forms\Dashboard\FormNotLoggedIn.resx">
       <DependentUpon>FormNotLoggedIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\LoggedInDashboardForm.resx">
+      <DependentUpon>LoggedInDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EquipmentManagement\FormCheckin.resx">
       <DependentUpon>FormCheckin.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard\FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\FormAccountSettings.resx">
+      <DependentUpon>FormAccountSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>

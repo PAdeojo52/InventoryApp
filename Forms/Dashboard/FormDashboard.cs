@@ -59,12 +59,18 @@ namespace InventoryApp.Forms
                     var fname = dt.Rows[0][1];
                     var lname = dt.Rows[0][2];
                     var email = dt.Rows[0][3];
+                    var phone = dt.Rows[0][4];
+                    var fine = dt.Rows[0][5];
                     formMainMenu.id = id.ToString();
                     formMainMenu.fname = fname.ToString();
                     formMainMenu.lname = lname.ToString();
                     formMainMenu.UserEmail = email.ToString();
+                    formMainMenu.phone = phone.ToString();
+                    formMainMenu.fine = fine.ToString();
                     formMainMenu.LoginWelcomeMessage(fname.ToString(), lname.ToString());
                     formMainMenu.isLoggedIn = true;
+
+                    formMainMenu.openChildForm(new LoggedInDashboardForm());
                 }
                 //MessageBox.Show("Login Failed");
                 //.

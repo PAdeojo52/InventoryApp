@@ -12,6 +12,7 @@ using FontAwesome.Sharp;
 using InventoryApp.Forms;
 using InventoryApp.Forms.Dashboard;
 using InventoryApp.Forms.LoginForm;
+using InventoryApp.Forms.Settings;
 using InventoryLibrary;
 using InventoryLibrary.Models;
 
@@ -28,6 +29,9 @@ namespace InventoryApp
         public string fname { get; set; }
         public string lname { get; set; }
         public string id { get; set; }
+        public string phone { get; set; }
+        public string fine { get; set; }
+        
         public bool isLoggedIn { get; set; }
         public List<EquipmentModel> equipment = new List<EquipmentModel>();
         public List<UserModel> user = new List<UserModel>();
@@ -112,7 +116,15 @@ namespace InventoryApp
         private void Dashboard_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Cyan);
-            openChildForm(new FormDashboard(this));
+            if (isLoggedIn == true)
+            {
+                openChildForm(new LoggedInDashboardForm());
+
+            }
+            else
+            {
+                openChildForm(new FormDashboard(this));
+            }
         }
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
@@ -122,11 +134,11 @@ namespace InventoryApp
 
         private void AccountInfo_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.DarkCyan);
+            ActivateButton(sender, Color.Peru);
             if (isLoggedIn == true)
             {
 
-                openChildForm(new FormSettings());
+                openChildForm(new FormAccountSettings(this));
             }
             else
             {
@@ -152,7 +164,14 @@ namespace InventoryApp
         private void Checkin_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Green);
-            openChildForm(new FormCheckin(this));
+            if (isLoggedIn == true)
+            {
+                openChildForm(new FormCheckin(this));
+            }
+            else
+            {
+                openChildForm(new FormNotLoggedIn());
+            }
         }
 
         private void Checkout_Click(object sender, EventArgs e)

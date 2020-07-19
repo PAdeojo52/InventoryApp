@@ -24,3 +24,5 @@ C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.For
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\InventoryLibrary.dll
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\bin\Debug\InventoryLibrary.pdb
 C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.Dashboard.FormNotLoggedIn.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.LoggedInDashboardForm.resources
+C:\Users\ptemi\source\repos\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Forms.Settings.FormAccountSettings.resources

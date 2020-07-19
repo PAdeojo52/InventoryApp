@@ -63,6 +63,12 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dashboard\FormNotLoggedIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\FormNotLoggedIn.Designer.cs">
+      <DependentUpon>FormNotLoggedIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EquipmentManagement\FormCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\FormNotLoggedIn.resx">
+      <DependentUpon>FormNotLoggedIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EquipmentManagement\FormCheckin.resx">
       <DependentUpon>FormCheckin.cs</DependentUpon>

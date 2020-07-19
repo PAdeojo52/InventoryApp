@@ -50,20 +50,22 @@ namespace InventoryApp.Forms
                 //UserSetup LoginConnector = new UserSetup();
                var loginGrab =  UserSetup.Login(emailBox.Text,PWBox.Text);
 
-                formMainMenu.UserEmail = loginGrab;
-                var dt = UserSetup.GetAccount(loginGrab);
+                if (!loginGrab.Equals("_failedLogin")) 
+                {
+                    formMainMenu.UserEmail = loginGrab;
+                    var dt = UserSetup.GetAccount(loginGrab);
 
-                var id = dt.Rows[0][0];
-                var fname = dt.Rows[0][1];
-                var lname = dt.Rows[0][2];
-                var email = dt.Rows[0][3];
-                formMainMenu.id = id.ToString();
-                formMainMenu.fname = fname.ToString();
-                formMainMenu.lname = lname.ToString();
-                formMainMenu.UserEmail = email.ToString();
-                formMainMenu.LoginWelcomeMessage(fname.ToString(), lname.ToString());
-                formMainMenu.isLoggedIn = true;
-
+                    var id = dt.Rows[0][0];
+                    var fname = dt.Rows[0][1];
+                    var lname = dt.Rows[0][2];
+                    var email = dt.Rows[0][3];
+                    formMainMenu.id = id.ToString();
+                    formMainMenu.fname = fname.ToString();
+                    formMainMenu.lname = lname.ToString();
+                    formMainMenu.UserEmail = email.ToString();
+                    formMainMenu.LoginWelcomeMessage(fname.ToString(), lname.ToString());
+                    formMainMenu.isLoggedIn = true;
+                }
                 //MessageBox.Show("Login Failed");
                 //.
             }

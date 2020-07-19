@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using InventoryApp.Forms;
+using InventoryApp.Forms.Dashboard;
 using InventoryApp.Forms.LoginForm;
 using InventoryLibrary;
 using InventoryLibrary.Models;
@@ -122,19 +123,36 @@ namespace InventoryApp
         private void AccountInfo_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.DarkCyan);
+            if (isLoggedIn == true)
+            {
+
+                openChildForm(new FormSettings());
+            }
+            else
+            {
+                openChildForm(new FormNotLoggedIn());
+            }
 
         }
        
         private void Settings_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Purple);
-            openChildForm(new FormSettings());
+            if (isLoggedIn == true)
+            {
+                
+                openChildForm(new FormSettings());
+            }
+            else
+            {
+                openChildForm(new FormNotLoggedIn());
+            }
         }
 
         private void Checkin_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Green);
-            openChildForm(new FormCheckin());
+            openChildForm(new FormCheckin(this));
         }
 
         private void Checkout_Click(object sender, EventArgs e)

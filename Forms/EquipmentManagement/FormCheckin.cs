@@ -1,4 +1,6 @@
-﻿using System;
+﻿using InventoryLibrary.DataAccess;
+using InventoryLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,48 @@ namespace InventoryApp.Forms
 {
     public partial class FormCheckin : Form
     {
-        public FormCheckin()
+        List<EquipmentModel> equipment = new List<EquipmentModel>();
+        private FormMainMenu formMainMenu;
+        public FormCheckin(FormMainMenu fmm)
         {
             InitializeComponent();
+            this.formMainMenu = fmm;
+            LoadCheckedoutEquipment();
+            
+        }
+
+       public void WireUpCheckedInBox()
+        {
+            CheckedInBox.DataSource = null;
+            CheckedInBox.DataSource = equipment;
+            CheckedInBox.DisplayMember = "MakeModel";
+        }
+        public void LoadCheckedoutEquipment()
+        {
+            CheckedInBox.DataSource = null;
+            CheckedInBox.Items.Clear();
+            equipment = EquipmentSetup.LoadCheckedOutEquipment(formMainMenu.id);
+            // activeFilter = "All";
+            WireUpCheckedInBox();
+        }
+
+        private void CheckinBtn_Click(object sender, EventArgs e)
+        {
+           
+            if (CheckedInBox.Items.Count>0)
+            {
+                int checkedIndex = CheckedInBox.SelectedIndex;
+                string macAddress = equipment[checkedIndex].MacAddress;
+
+                EquipmentSetup.CheckIn(macAddress);
+
+
+                LoadCheckedoutEquipment();
+            }
+            else
+            {
+                MessageBox.Show("List Empty", "Eclipsa");
+            }
         }
     }
 }

@@ -106,11 +106,34 @@ namespace InventoryApp.Forms
 
         private void CheckOutBtn_Click(object sender, EventArgs e)
         {
-            int checkedIndex = EquipmentListBox.SelectedIndex;
-            string macAddress = equipment[checkedIndex].MacAddress;
+            if (EquipmentListBox.Items.Count > 0)
+            {
+                int checkedIndex = EquipmentListBox.SelectedIndex;
+                string macAddress = equipment[checkedIndex].MacAddress;
 
-            EquipmentSetup.CheckOut(formMainMenu.id, macAddress);
+                EquipmentSetup.CheckOut(formMainMenu.id, macAddress);
 
+                if (activeFilter.Equals("Desktop"))
+                {
+                    LoadDesktopList();
+                }
+                else if (activeFilter.Equals("Laptop"))
+                {
+                    LoadLaptopList();
+                }
+                else if (activeFilter.Equals("Phone"))
+                {
+                    LoadPhoneList();
+                }
+                else
+                {
+                    LoadEquipmentList();
+                }
+            }
+            else
+            {
+                MessageBox.Show("List Empty", "Eclipsa");
+            }
         }
     }
 }

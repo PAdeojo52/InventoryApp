@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using InventoryApp.Forms;
 using InventoryApp.Forms.LoginForm;
+using InventoryLibrary;
+using InventoryLibrary.Models;
 
 namespace InventoryApp
 {
@@ -21,8 +23,14 @@ namespace InventoryApp
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        private int USERID = -1;
-        private bool isLoggedIn;
+        public string UserEmail { get; set; }
+        public string fname { get; set; }
+        public string lname { get; set; }
+        public string id { get; set; }
+        public bool isLoggedIn { get; set; }
+        public List<EquipmentModel> equipment = new List<EquipmentModel>();
+        public List<UserModel> user = new List<UserModel>();
+        
 
         public Form CurrentChildForm { get => currentChildForm; set => currentChildForm = value; }
 
@@ -32,7 +40,7 @@ namespace InventoryApp
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 60);
             panelMenu.Controls.Add(leftBorderBtn);
-
+            isLoggedIn = false;
 
 
             //form remove the header
@@ -42,6 +50,9 @@ namespace InventoryApp
 
             //set max size of the form 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            //Hides the label
+            WelcomeLabel.Hide();
 
 
            
@@ -129,13 +140,13 @@ namespace InventoryApp
         private void Checkout_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Yellow);
-            openChildForm(new FormCheckout());
+            openChildForm(new FormCheckout(this));
         }
 
         private void Stock_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.Magenta);
-            openChildForm(new FormStock());
+            openChildForm(new FormStock(this));
             
         }
 
@@ -185,6 +196,15 @@ namespace InventoryApp
             lblTitleChildForm.Text = childForm.Text;
         }
 
+        public void LoginWelcomeMessage(string firstname , string lastname)
+        {
+            WelcomeLabel.Show();
+            WelcomeLabel.Text = "Welcome";
+            LoginLabel.Text = firstname + " " + lastname;
+            
+            
+        }
+
 
         //Draggin gitle form form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -221,6 +241,11 @@ namespace InventoryApp
         }
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LoginLabel_Click(object sender, EventArgs e)
         {
 
         }

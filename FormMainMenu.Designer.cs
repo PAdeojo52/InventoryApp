@@ -32,7 +32,6 @@
             this.Settings = new FontAwesome.Sharp.IconButton();
             this.Account_Information = new FontAwesome.Sharp.IconButton();
             this.Check_In = new FontAwesome.Sharp.IconButton();
-            this.Check_Out = new FontAwesome.Sharp.IconButton();
             this.Stock = new FontAwesome.Sharp.IconButton();
             this.Dashboard = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -44,6 +43,8 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.LoginLabel = new System.Windows.Forms.Label();
+            this.WelcomeLabel = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -57,7 +58,6 @@
             this.panelMenu.Controls.Add(this.Settings);
             this.panelMenu.Controls.Add(this.Account_Information);
             this.panelMenu.Controls.Add(this.Check_In);
-            this.panelMenu.Controls.Add(this.Check_Out);
             this.panelMenu.Controls.Add(this.Stock);
             this.panelMenu.Controls.Add(this.Dashboard);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -78,7 +78,7 @@
             this.Settings.IconColor = System.Drawing.Color.Gainsboro;
             this.Settings.IconSize = 32;
             this.Settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Settings.Location = new System.Drawing.Point(0, 440);
+            this.Settings.Location = new System.Drawing.Point(0, 380);
             this.Settings.Name = "Settings";
             this.Settings.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Settings.Rotation = 0D;
@@ -101,7 +101,7 @@
             this.Account_Information.IconColor = System.Drawing.Color.Gainsboro;
             this.Account_Information.IconSize = 32;
             this.Account_Information.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Account_Information.Location = new System.Drawing.Point(0, 380);
+            this.Account_Information.Location = new System.Drawing.Point(0, 320);
             this.Account_Information.Name = "Account_Information";
             this.Account_Information.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Account_Information.Rotation = 0D;
@@ -124,7 +124,7 @@
             this.Check_In.IconColor = System.Drawing.Color.Gainsboro;
             this.Check_In.IconSize = 32;
             this.Check_In.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Check_In.Location = new System.Drawing.Point(0, 320);
+            this.Check_In.Location = new System.Drawing.Point(0, 260);
             this.Check_In.Name = "Check_In";
             this.Check_In.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.Check_In.Rotation = 0D;
@@ -135,29 +135,6 @@
             this.Check_In.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Check_In.UseVisualStyleBackColor = true;
             this.Check_In.Click += new System.EventHandler(this.Checkin_Click);
-            // 
-            // Check_Out
-            // 
-            this.Check_Out.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Check_Out.FlatAppearance.BorderSize = 0;
-            this.Check_Out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Check_Out.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.Check_Out.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Check_Out.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.Check_Out.IconColor = System.Drawing.Color.Gainsboro;
-            this.Check_Out.IconSize = 32;
-            this.Check_Out.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Check_Out.Location = new System.Drawing.Point(0, 260);
-            this.Check_Out.Name = "Check_Out";
-            this.Check_Out.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Check_Out.Rotation = 0D;
-            this.Check_Out.Size = new System.Drawing.Size(220, 60);
-            this.Check_Out.TabIndex = 3;
-            this.Check_Out.Text = "Check Out";
-            this.Check_Out.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Check_Out.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Check_Out.UseVisualStyleBackColor = true;
-            this.Check_Out.Click += new System.EventHandler(this.Checkout_Click);
             // 
             // Stock
             // 
@@ -228,6 +205,8 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelTitleBar.Controls.Add(this.WelcomeLabel);
+            this.panelTitleBar.Controls.Add(this.LoginLabel);
             this.panelTitleBar.Controls.Add(this.BtnMin);
             this.panelTitleBar.Controls.Add(this.BtnExit);
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
@@ -314,6 +293,26 @@
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
+            // LoginLabel
+            // 
+            this.LoginLabel.AutoSize = true;
+            this.LoginLabel.ForeColor = System.Drawing.Color.Black;
+            this.LoginLabel.Location = new System.Drawing.Point(517, 31);
+            this.LoginLabel.Name = "LoginLabel";
+            this.LoginLabel.Size = new System.Drawing.Size(97, 17);
+            this.LoginLabel.TabIndex = 4;
+            this.LoginLabel.Text = "Not Logged In";
+            this.LoginLabel.Click += new System.EventHandler(this.LoginLabel_Click);
+            // 
+            // WelcomeLabel
+            // 
+            this.WelcomeLabel.AutoSize = true;
+            this.WelcomeLabel.ForeColor = System.Drawing.Color.Black;
+            this.WelcomeLabel.Location = new System.Drawing.Point(517, 14);
+            this.WelcomeLabel.Name = "WelcomeLabel";
+            this.WelcomeLabel.Size = new System.Drawing.Size(0, 17);
+            this.WelcomeLabel.TabIndex = 5;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,7 +343,6 @@
         private FontAwesome.Sharp.IconButton Settings;
         private FontAwesome.Sharp.IconButton Account_Information;
         private FontAwesome.Sharp.IconButton Check_In;
-        private FontAwesome.Sharp.IconButton Check_Out;
         private FontAwesome.Sharp.IconButton Stock;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Panel panelTitleBar;
@@ -354,6 +352,8 @@
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconButton BtnExit;
         private FontAwesome.Sharp.IconButton BtnMin;
+        private System.Windows.Forms.Label LoginLabel;
+        private System.Windows.Forms.Label WelcomeLabel;
     }
 }
 

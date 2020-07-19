@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace InventoryApp.Forms
 {
-    public partial class FormCheckout : Form
+    public partial class LoggedInDashboardForm : Form
     {
-        private FormMainMenu formMainMenu;
-        public FormCheckout()
+        public LoggedInDashboardForm()
         {
             InitializeComponent();
-        }
-
-        public FormCheckout(FormMainMenu formMainMenu)
-        {
-            InitializeComponent();
-            this.formMainMenu = formMainMenu;
         }
     }
 }

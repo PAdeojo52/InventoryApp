@@ -75,11 +75,17 @@
     <Compile Include="Forms\EquipmentManagement\FormCheckout.Designer.cs">
       <DependentUpon>FormCheckout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormDashboard.cs">
+    <Compile Include="Forms\Dashboard\FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormDashboard.Designer.cs">
+    <Compile Include="Forms\Dashboard\FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\LoggedInDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\LoggedInDashboardForm.Designer.cs">
+      <DependentUpon>LoggedInDashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Settings\FormSettings.cs">
       <SubType>Form</SubType>
@@ -110,7 +116,7 @@
     <EmbeddedResource Include="Forms\EquipmentManagement\FormCheckout.resx">
       <DependentUpon>FormCheckout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormDashboard.resx">
+    <EmbeddedResource Include="Forms\Dashboard\FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings\FormSettings.resx">

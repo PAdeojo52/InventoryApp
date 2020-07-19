@@ -15,10 +15,23 @@ namespace InventoryApp.Forms
     public partial class FormStock : Form
     {
         List<EquipmentModel> equipment = new List<EquipmentModel>();
-        public FormStock()
+        private FormMainMenu formMainMenu;
+        public string activeFilter { get; set; }
+        public FormStock(FormMainMenu fmm)
         {
             InitializeComponent();
             LoadEquipmentList();
+            this.formMainMenu = fmm;
+            activeFilter = "All";
+
+            if (formMainMenu.isLoggedIn == false)
+            {
+                CheckOutBtn.Hide();
+            }
+            else
+            {
+                CheckOutBtn.Show();
+            }
         }
 
 
@@ -27,6 +40,7 @@ namespace InventoryApp.Forms
             EquipmentListBox.DataSource = null;
             EquipmentListBox.Items.Clear();
             equipment = EquipmentSetup.LoadEquipment();
+            activeFilter = "All";
             WireUpEquipmentList();
         }
 
@@ -35,6 +49,7 @@ namespace InventoryApp.Forms
             EquipmentListBox.DataSource = null;
             EquipmentListBox.Items.Clear();
             equipment = EquipmentSetup.LoadDesktop();
+            activeFilter = "Desktop";
             WireUpEquipmentList();
         }
 
@@ -43,6 +58,7 @@ namespace InventoryApp.Forms
             EquipmentListBox.DataSource = null;
             EquipmentListBox.Items.Clear();
             equipment = EquipmentSetup.LoadLaptop();
+            activeFilter = "Laptop";
             WireUpEquipmentList();
         }
 
@@ -51,14 +67,15 @@ namespace InventoryApp.Forms
             EquipmentListBox.DataSource = null;
             EquipmentListBox.Items.Clear();
             equipment = EquipmentSetup.LoadPhone();
-            WireUpEquipmentList();
+            activeFilter = "Phone";
+            WireUpEquipmentList(); ;
         }
 
         public void WireUpEquipmentList()
         {
             EquipmentListBox.DataSource = null;
             EquipmentListBox.DataSource = equipment;
-            EquipmentListBox.DisplayMember = "MakeModel" ;
+            EquipmentListBox.DisplayMember = "MakeModel";
         }
 
 
@@ -85,6 +102,15 @@ namespace InventoryApp.Forms
         private void DisplayPhoneBtn_Click(object sender, EventArgs e)
         {
             LoadPhoneList();
+        }
+
+        private void CheckOutBtn_Click(object sender, EventArgs e)
+        {
+            int checkedIndex = EquipmentListBox.SelectedIndex;
+            string macAddress = equipment[checkedIndex].MacAddress;
+
+            EquipmentSetup.CheckOut(formMainMenu.id, macAddress);
+
         }
     }
 }

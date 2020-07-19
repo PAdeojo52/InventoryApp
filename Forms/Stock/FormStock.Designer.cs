@@ -33,6 +33,7 @@
             this.DisplayDesktopBtn = new FontAwesome.Sharp.IconButton();
             this.DisplayLaptopBtn = new FontAwesome.Sharp.IconButton();
             this.DisplayPhoneBtn = new FontAwesome.Sharp.IconButton();
+            this.CheckOutBtn = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // EquipmentListBox
@@ -105,12 +106,28 @@
             this.DisplayPhoneBtn.UseVisualStyleBackColor = true;
             this.DisplayPhoneBtn.Click += new System.EventHandler(this.DisplayPhoneBtn_Click);
             // 
+            // CheckOutBtn
+            // 
+            this.CheckOutBtn.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.CheckOutBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.CheckOutBtn.IconColor = System.Drawing.Color.Black;
+            this.CheckOutBtn.IconSize = 16;
+            this.CheckOutBtn.Location = new System.Drawing.Point(336, 298);
+            this.CheckOutBtn.Name = "CheckOutBtn";
+            this.CheckOutBtn.Rotation = 0D;
+            this.CheckOutBtn.Size = new System.Drawing.Size(141, 64);
+            this.CheckOutBtn.TabIndex = 5;
+            this.CheckOutBtn.Text = "Check Out";
+            this.CheckOutBtn.UseVisualStyleBackColor = true;
+            this.CheckOutBtn.Click += new System.EventHandler(this.CheckOutBtn_Click);
+            // 
             // FormStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CheckOutBtn);
             this.Controls.Add(this.DisplayPhoneBtn);
             this.Controls.Add(this.DisplayLaptopBtn);
             this.Controls.Add(this.DisplayDesktopBtn);
@@ -129,5 +146,6 @@
         private FontAwesome.Sharp.IconButton DisplayDesktopBtn;
         private FontAwesome.Sharp.IconButton DisplayLaptopBtn;
         private FontAwesome.Sharp.IconButton DisplayPhoneBtn;
+        private FontAwesome.Sharp.IconButton CheckOutBtn;
     }
 }

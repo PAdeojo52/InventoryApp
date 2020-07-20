@@ -21,6 +21,7 @@ namespace InventoryApp.Forms
         {
             InitializeComponent();
             emailBox.Focus();
+            Text = "Dashboard";
         }
 
         public FormDashboard(FormMainMenu formMainMenu)
@@ -28,6 +29,7 @@ namespace InventoryApp.Forms
             InitializeComponent();
             emailBox.Focus();
             this.formMainMenu = formMainMenu;
+            Text = "Dashboard";
         }
         /* cutting input validations for time
          * public  bool ValidateEmail(this string s)
@@ -76,7 +78,7 @@ namespace InventoryApp.Forms
                     formMainMenu.fine = fine.ToString();
                     formMainMenu.LoginWelcomeMessage(fname.ToString(), lname.ToString());
                     formMainMenu.isLoggedIn = true;
-
+                   
                     formMainMenu.openChildForm(new LoggedInDashboardForm());
                 }
                 //MessageBox.Show("Login Failed");

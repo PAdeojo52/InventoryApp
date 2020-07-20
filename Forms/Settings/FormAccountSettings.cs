@@ -23,6 +23,7 @@ namespace InventoryApp.Forms.Settings
             EmailLabel.Text = formMainMenu.UserEmail;
             PhoneNumberLabel.Text = formMainMenu.phone;
             CurrentFineLabel.Text = "$"+ formMainMenu.fine;
+            Text = "Account";
 
 
         }

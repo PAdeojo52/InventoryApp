@@ -21,7 +21,8 @@ namespace InventoryApp.Forms
             InitializeComponent();
             this.formMainMenu = fmm;
             LoadCheckedoutEquipment();
-            
+            Text = "Check In";
+
         }
 
        public void WireUpCheckedInBox()

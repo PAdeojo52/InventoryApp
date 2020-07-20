@@ -45,6 +45,7 @@
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.LogOutBtn = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -205,6 +206,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelTitleBar.Controls.Add(this.LogOutBtn);
             this.panelTitleBar.Controls.Add(this.WelcomeLabel);
             this.panelTitleBar.Controls.Add(this.LoginLabel);
             this.panelTitleBar.Controls.Add(this.BtnMin);
@@ -281,6 +283,7 @@
             this.lblTitleChildForm.Size = new System.Drawing.Size(45, 17);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
+            this.lblTitleChildForm.Click += new System.EventHandler(this.lblTitleChildForm_Click);
             // 
             // iconCurrentChildForm
             // 
@@ -313,6 +316,16 @@
             this.panelDesktop.Size = new System.Drawing.Size(901, 521);
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // LogOutBtn
+            // 
+            this.LogOutBtn.Location = new System.Drawing.Point(530, 61);
+            this.LogOutBtn.Name = "LogOutBtn";
+            this.LogOutBtn.Size = new System.Drawing.Size(75, 23);
+            this.LogOutBtn.TabIndex = 6;
+            this.LogOutBtn.Text = "Logout";
+            this.LogOutBtn.UseVisualStyleBackColor = true;
+            this.LogOutBtn.Click += new System.EventHandler(this.LogOutBtn_Click);
             // 
             // FormMainMenu
             // 
@@ -355,6 +368,7 @@
         private FontAwesome.Sharp.IconButton BtnMin;
         private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.Label WelcomeLabel;
+        private System.Windows.Forms.Button LogOutBtn;
     }
 }
 

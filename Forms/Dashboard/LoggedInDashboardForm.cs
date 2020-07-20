@@ -15,6 +15,7 @@ namespace InventoryApp.Forms
         public LoggedInDashboardForm()
         {
             InitializeComponent();
+            Text = "Dashboard";
         }
     }
 }

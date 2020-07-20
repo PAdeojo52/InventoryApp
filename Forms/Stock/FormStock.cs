@@ -22,6 +22,7 @@ namespace InventoryApp.Forms
         {
             InitializeComponent();
             LoadEquipmentList();
+            Text = "Stock";
             this.formMainMenu = fmm;
             activeFilter = "All";
 

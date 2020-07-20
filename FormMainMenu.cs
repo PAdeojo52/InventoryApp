@@ -55,6 +55,7 @@ namespace InventoryApp
 
             //set max size of the form 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            LogOutBtn.Hide();
 
             //Hides the label
             WelcomeLabel.Hide();
@@ -119,6 +120,7 @@ namespace InventoryApp
             ActivateButton(sender, Color.Cyan);
             if (isLoggedIn == true)
             {
+
                 openChildForm(new LoggedInDashboardForm());
 
             }
@@ -242,8 +244,26 @@ namespace InventoryApp
             WelcomeLabel.Show();
             WelcomeLabel.Text = "Welcome";
             LoginLabel.Text = firstname + " " + lastname;
+            LogOutBtn.Show();
             
             
+        }
+
+        private void LogOutBtn_Click(object sender, EventArgs e)
+        {
+            id = "";
+            fname = "";
+            lname = "";
+            UserEmail = "";
+            phone = "";
+            fine = "";
+            //  LoginWelcomeMessage(fname.ToString(), lname.ToString());
+            WelcomeLabel.Hide();
+            LoginLabel.Hide();
+            isLoggedIn = false;
+            LogOutBtn.Hide();
+
+           openChildForm(new FormDashboard(this));
         }
 
 
@@ -290,5 +310,12 @@ namespace InventoryApp
         {
 
         }
+
+        private void lblTitleChildForm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

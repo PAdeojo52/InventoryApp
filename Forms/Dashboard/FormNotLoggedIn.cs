@@ -15,6 +15,7 @@ namespace InventoryApp.Forms.Dashboard
         public FormNotLoggedIn()
         {
             InitializeComponent();
+            Text = "Not Logged In";
         }
     }
 }

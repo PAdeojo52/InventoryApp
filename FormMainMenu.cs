@@ -196,8 +196,11 @@ namespace InventoryApp
         //Needs some work on the reset
         private void btnHome_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
-            Reset();
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+                Reset();
+            }
         }
 
         public void btnHomeChild_Click(object sender, EventArgs e)

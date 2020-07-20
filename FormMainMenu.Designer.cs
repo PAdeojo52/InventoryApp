@@ -253,6 +253,7 @@
             this.BtnMin.Size = new System.Drawing.Size(74, 60);
             this.BtnMin.TabIndex = 3;
             this.BtnMin.UseVisualStyleBackColor = true;
+            this.BtnMin.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // BtnExit
             // 

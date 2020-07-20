@@ -1,4 +1,5 @@
-﻿using InventoryLibrary.DataAccess;
+﻿using InventoryApp.Forms.EquipmentManagement;
+using InventoryLibrary.DataAccess;
 using InventoryLibrary.Models;
 using System;
 using System.Collections.Generic;
@@ -134,6 +135,11 @@ namespace InventoryApp.Forms
             {
                 MessageBox.Show("List Empty", "Eclipsa");
             }
+        }
+
+        private void AddEqupmentButton_Click(object sender, EventArgs e)
+        {
+            formMainMenu.openChildForm(new FormAddEquipment(formMainMenu));
         }
     }
 }

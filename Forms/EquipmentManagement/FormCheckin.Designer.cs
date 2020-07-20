@@ -40,6 +40,7 @@
             this.CheckedInBox.Name = "CheckedInBox";
             this.CheckedInBox.Size = new System.Drawing.Size(271, 356);
             this.CheckedInBox.TabIndex = 1;
+            this.CheckedInBox.SelectedIndexChanged += new System.EventHandler(this.CheckedInBox_SelectedIndexChanged);
             // 
             // CheckinBtn
             // 

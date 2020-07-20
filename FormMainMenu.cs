@@ -58,6 +58,7 @@ namespace InventoryApp
 
             //Hides the label
             WelcomeLabel.Hide();
+            Settings.Hide();
 
 
            

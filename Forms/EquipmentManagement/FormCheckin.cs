@@ -57,5 +57,10 @@ namespace InventoryApp.Forms
                 MessageBox.Show("List Empty", "Eclipsa");
             }
         }
+
+        private void CheckedInBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

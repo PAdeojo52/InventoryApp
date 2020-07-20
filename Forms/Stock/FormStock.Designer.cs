@@ -34,6 +34,7 @@
             this.DisplayLaptopBtn = new FontAwesome.Sharp.IconButton();
             this.DisplayPhoneBtn = new FontAwesome.Sharp.IconButton();
             this.CheckOutBtn = new FontAwesome.Sharp.IconButton();
+            this.AddEqupmentButton = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // EquipmentListBox
@@ -121,12 +122,28 @@
             this.CheckOutBtn.UseVisualStyleBackColor = true;
             this.CheckOutBtn.Click += new System.EventHandler(this.CheckOutBtn_Click);
             // 
+            // AddEqupmentButton
+            // 
+            this.AddEqupmentButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.AddEqupmentButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.AddEqupmentButton.IconColor = System.Drawing.Color.Black;
+            this.AddEqupmentButton.IconSize = 16;
+            this.AddEqupmentButton.Location = new System.Drawing.Point(336, 22);
+            this.AddEqupmentButton.Name = "AddEqupmentButton";
+            this.AddEqupmentButton.Rotation = 0D;
+            this.AddEqupmentButton.Size = new System.Drawing.Size(141, 64);
+            this.AddEqupmentButton.TabIndex = 6;
+            this.AddEqupmentButton.Text = "Add Equipment";
+            this.AddEqupmentButton.UseVisualStyleBackColor = true;
+            this.AddEqupmentButton.Click += new System.EventHandler(this.AddEqupmentButton_Click);
+            // 
             // FormStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AddEqupmentButton);
             this.Controls.Add(this.CheckOutBtn);
             this.Controls.Add(this.DisplayPhoneBtn);
             this.Controls.Add(this.DisplayLaptopBtn);
@@ -147,5 +164,6 @@
         private FontAwesome.Sharp.IconButton DisplayLaptopBtn;
         private FontAwesome.Sharp.IconButton DisplayPhoneBtn;
         private FontAwesome.Sharp.IconButton CheckOutBtn;
+        private FontAwesome.Sharp.IconButton AddEqupmentButton;
     }
 }

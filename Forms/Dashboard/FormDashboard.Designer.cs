@@ -37,8 +37,6 @@
             this.PasswordLoginLabel = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.PWBox = new System.Windows.Forms.TextBox();
-            this.IncorrectEmailLabel = new System.Windows.Forms.Label();
-            this.IncorrectPasswordLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StatusBar
@@ -120,30 +118,12 @@
             this.PWBox.Size = new System.Drawing.Size(194, 22);
             this.PWBox.TabIndex = 8;
             // 
-            // IncorrectEmailLabel
-            // 
-            this.IncorrectEmailLabel.AutoSize = true;
-            this.IncorrectEmailLabel.Location = new System.Drawing.Point(622, 149);
-            this.IncorrectEmailLabel.Name = "IncorrectEmailLabel";
-            this.IncorrectEmailLabel.Size = new System.Drawing.Size(0, 17);
-            this.IncorrectEmailLabel.TabIndex = 9;
-            // 
-            // IncorrectPasswordLabel
-            // 
-            this.IncorrectPasswordLabel.AutoSize = true;
-            this.IncorrectPasswordLabel.Location = new System.Drawing.Point(622, 201);
-            this.IncorrectPasswordLabel.Name = "IncorrectPasswordLabel";
-            this.IncorrectPasswordLabel.Size = new System.Drawing.Size(0, 17);
-            this.IncorrectPasswordLabel.TabIndex = 10;
-            // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.IncorrectPasswordLabel);
-            this.Controls.Add(this.IncorrectEmailLabel);
             this.Controls.Add(this.PWBox);
             this.Controls.Add(this.emailBox);
             this.Controls.Add(this.PasswordLoginLabel);
@@ -172,7 +152,5 @@
         private System.Windows.Forms.Label PasswordLoginLabel;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.TextBox PWBox;
-        private System.Windows.Forms.Label IncorrectEmailLabel;
-        private System.Windows.Forms.Label IncorrectPasswordLabel;
     }
 }
